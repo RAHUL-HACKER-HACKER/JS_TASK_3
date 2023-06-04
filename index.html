@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Task 3</title>
+<style type="text/css">
+
+label{
+	font-weight: bold;
+}
+input{
+	border: 2px solid black;
+}
+textarea{
+	border: 2px solid black;
+}
+label,input,textarea{
+	margin: 10px;
+}
+h1{
+	text-align: center;
+}
+div{
+	padding: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+</style>
+</head>
+<body>
+
+
+<div>
+	
+
+<form name="form">
+	<label>Name:</label>
+	<input type="text" id="text1" ><span id="span1"></span><br><br>
+
+	<label>Email:</label>
+	<input type="text" id="email"><span id="span2"></span><br><br>
+
+	<label>Website:</label>
+	<input type="text" id="website"><span id="span3"></span><br><br>
+
+	<label>Message:</label>
+	<textarea id="textarea" rows="4" cols="20"></textarea><span id="span4"></span><br><br><br>
+
+	<input type="button" value="Submit" id="submit" onclick="validation()" >
+	
+</form>
+
+</div>
+<script type="text/javascript">
+	
+	function validation(){
+		
+
+		if (document.getElementById("text1").value=="") {
+			document.getElementById("text1").style.border="3px solid red";
+			document.getElementById("span1").innerHTML="This field is required";
+			document.getElementById("span1").style.color = "red";
+			
+
+
+		}
+		if (document.getElementById("email").value=="") {
+			document.getElementById("email").style.border="3px solid red";
+			document.getElementById("span2").innerHTML="A valid address is required";
+			document.getElementById("span2").style.color = "red";
+
+			
+
+
+		}
+		if (document.getElementById("website").value=="") {
+			document.getElementById("website").style.border="3px solid red";
+			document.getElementById("span3").innerHTML="A valid url is required";
+			document.getElementById("span3").style.color = "red";
+			
+
+
+		}
+		if (document.getElementById("textarea").value=="") {
+			document.getElementById("textarea").style.border="3px solid red";
+			document.getElementById("span4").innerHTML="This field is required";
+			document.getElementById("span4").style.color = "red";
+			
+
+
+		}
+}
+</script>
+
+</body>
+</html>
